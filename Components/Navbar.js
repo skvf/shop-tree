@@ -6,7 +6,7 @@ import React from "react";
 export function Navbar() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Brecho</Text>
+      {/* <Text style={styles.text}>Brecho</Text> */}
     </View>
   );
 }
@@ -27,12 +27,12 @@ export function UserSession() {
   });
 
   return (
-    <View style={styles.container}>
+    <View style={styles.containerUserSession}>
       <Image
         source={{
           uri: profileImage,
         }}
-        style={{ width: 50, height: 50, borderRadius: 25 }}
+        style={{ width: 50, height: 50, borderRadius: 25, marginRight: 6 }}
       />
       <Text style={styles.text}>{message}</Text>
     </View>
@@ -48,6 +48,11 @@ const styles = StyleSheet.create({
     color: "#333",
     textAlign: "center",
     fontWeight: "bold",
-    fontSize: 32,
+    fontSize: 24,
+  },
+  containerUserSession: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 6,
   },
 });

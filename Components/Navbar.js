@@ -60,5 +60,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 6,
+    backgroundColor: "white",
   },
 });

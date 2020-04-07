@@ -6,7 +6,7 @@ import React from "react";
 export function Navbar() {
   return (
     <View style={styles.container}>
-      {/* <Text style={styles.text}>Brecho</Text> */}
+      {<Text style={styles.textTitulo}>Brecho do amor</Text>}
     </View>
   );
 }
@@ -46,6 +46,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#333",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  textTitulo: {
+    color: "green",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 24,

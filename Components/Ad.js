@@ -1,6 +1,7 @@
-import { Dimensions, Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, Image, ScrollView, View } from "react-native";
 
 import React from "react";
+import StyledText from './Text';
 
 const URI =
   "https://photos.enjoei.com.br/public/640x350/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9iYW5uZXJzLzQ3MTkyOS85NTc5OGM3ZmY4ZGVlMTEwYWM2YzVhMjNkNTRjOWQ5NC5qcGc";
@@ -23,8 +24,8 @@ export function Ad(props) {
       {adList.map(ad => (
         <View key={ad.id} style={{ padding: 6 }}>
           <View>
-            <Text>{ad.title}</Text>
-            <Text>{ad.subtitle}</Text>
+            <StyledText>{ad.title}</StyledText>
+            <StyledText>{ad.subtitle}</StyledText>
           </View>
           <View>
             <Image

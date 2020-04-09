@@ -1,5 +1,7 @@
+import { Dimensions, FlatList, Image, View } from "react-native";
+
 import React from "react";
-import { Text, View, FlatList, Image, Dimensions } from "react-native";
+import StyledText from './Text'
 
 const products = [
   {
@@ -36,12 +38,12 @@ function ProducList(props) {
   const { height, width } = Dimensions.get("window");
   const maxImageWidthAndHeight = width / 2;
 
-  // retorna código JSX
+  // retorna cÃ³digo JSX
   return (
     <FlatList
       numColumns={2}
       data={products}
-      // função anonima
+      // funÃ§Ã£o anonima
       keyExtractor={product => product.id}
       renderItem={({ item }) => (
         <View>
@@ -54,8 +56,8 @@ function ProducList(props) {
               height: maxImageWidthAndHeight - 8
             }}
           />
-          <Text>R$ {item.price}</Text>
-          <Text>{item.name}</Text>
+          <StyledText>R$ {item.price}</StyledText>
+          <StyledText>{item.name}</StyledText>
         </View>
       )}
     />

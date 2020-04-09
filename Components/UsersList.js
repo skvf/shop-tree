@@ -1,6 +1,7 @@
 import { FlatList, Image, Text, View } from 'react-native';
 
 import React from 'react';
+import StyledText from './Text'
 
 const USERS = [{
     id: 1,
@@ -18,8 +19,8 @@ function UsersListItem({ user }) {
     return (
         <>
             <Image style={{width: 50, height: 50}} source={{ uri: user.imageURI}} />
-            <Text style={{ fontWeight: "bold" }}>Name: {user.name}</Text>
-            <Text>Sign: {user.sign}</Text>
+            <StyledText>Name: {user.name}</StyledText>
+            <StyledText>Sign: {user.sign}</StyledText>
         </>
     )
 }

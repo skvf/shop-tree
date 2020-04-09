@@ -1,13 +1,14 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 
 import COLORS from "../constants/colors.json";
 import React from "react";
+import StyledText from './Text';
 
 // componente de navegaçao que não é uma função pq tem propiedades
 export function Navbar() {
   return (
     <View style={styles.container}>
-      {<Text style={styles.textTitulo}>Brecho do amor</Text>}
+      <StyledText>Brecho do amor</StyledText>
     </View>
   );
 }
@@ -35,7 +36,7 @@ export function UserSession() {
         }}
         style={{ width: 50, height: 50, borderRadius: 25, marginRight: 6 }}
       />
-      <Text style={styles.text}>{message}</Text>
+      <StyledText>{message}</StyledText>
     </View>
   );
 }
@@ -43,24 +44,10 @@ export function UserSession() {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 30,
-    backgroundColor: "white",
-  },
-  text: {
-    color: "#333",
-    textAlign: "center",
-    fontWeight: "bold",
-    fontSize: 18,
-  },
-  textTitulo: {
-    color: COLORS.primary,
-    textAlign: "center",
-    fontWeight: "bold",
-    fontSize: 24,
   },
   containerUserSession: {
     flexDirection: "row",
     alignItems: "center",
     padding: 6,
-    backgroundColor: "white",
   },
 });

@@ -1,15 +1,15 @@
-import { ScrollView, Text, TextInput, View, Button } from 'react-native';
+import { Button, ScrollView, TextInput, View } from 'react-native';
 
 import React from 'react';
+import StyledText from '../Components/Text';
 
 function Login() {
 
     return (
             <ScrollView style={{padding: 60}}>
-                <Text 
-                    style={{fontSize: 27}}>
+                <StyledText>0
                     Login
-                </Text>
+                </StyledText>
                 <TextInput placeholder='Username' />
                 <TextInput placeholder='Password' />
                 <View style={{margin:7}} />

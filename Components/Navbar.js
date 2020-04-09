@@ -1,5 +1,6 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
+import COLORS from "../constants/colors.json";
 import React from "react";
 
 // componente de navegaçao que não é uma função pq tem propiedades
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   textTitulo: {
-    color: "green",
+    color: COLORS.primary,
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 24,

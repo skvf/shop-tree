@@ -1,7 +1,8 @@
 import { Navbar, UserSession } from "./Components/Navbar";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-import { FontAwesome } from '@expo/vector-icons';
+import COLORS from "./constants/colors.json";
+import { FontAwesome } from "@expo/vector-icons";
 import HomeScreen from "./Screens/HomeScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import { NavigationContainer } from "@react-navigation/native";
@@ -19,23 +20,24 @@ export default function App() {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
+            let iconName;
 
-          if (route.name === 'Home') {
-            iconName = focused ? 'home': 'home';
-          } else if (route.name === 'Login') {
-            iconName = focused ? 'user' : 'user';
-          }else if (route.name === 'Register') {
-            iconName = focused ? 'envelope' : 'envelope';}
-            else if (route.name === 'Settings') {
-              iconName = focused ? 'gear' : 'gear';}
+            if (route.name === "Home") {
+              iconName = focused ? "home" : "home";
+            } else if (route.name === "Login") {
+              iconName = focused ? "user" : "user";
+            } else if (route.name === "Register") {
+              iconName = focused ? "envelope" : "envelope";
+            } else if (route.name === "Settings") {
+              iconName = focused ? "gear" : "gear";
+            }
 
-          return <FontAwesome name={iconName} size={size} color={color} />
-        }
+            return <FontAwesome name={iconName} size={size} color={color} />;
+          },
         })}
         tabBarOptions={{
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray', 
+          activeTintColor: COLORS.primary,
+          inactiveTintColor: "gray",
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
